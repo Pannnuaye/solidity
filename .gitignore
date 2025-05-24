@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+# Foundry build output
+out/
+# Python虚拟环境
+venv/
+.env
+web3bugs-102/lib/chainlink/
+web3bugs-102/lib/ds-test/
+web3bugs-102/lib/forge-std/
+web3bugs-102/lib/openzeppelin-contracts/
+web3bugs-102/lib/v2-periphery/

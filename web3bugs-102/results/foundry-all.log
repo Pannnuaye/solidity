@@ -1,0 +1,98 @@
+No files changed, compilation skipped
+
+Ran 1 test for src/test/integration/IntegrationTest.t.sol:IntegrationTest
+[PASS] testPass() (gas: 187)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 6.22ms (805.26µs CPU time)
+
+Ran 1 test for test/Smoke.t.sol:SmokeTest
+[PASS] testCompileOnly() (gas: 249)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 6.34ms (785.73µs CPU time)
+
+Ran 2 tests for src/test/unit/Volt.t.sol:VoltTest
+[PASS] testDeployedMetaData() (gas: 18480)
+[PASS] testMintsVolt() (gas: 72650)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 7.63ms (78.71µs CPU time)
+
+Ran 2 tests for src/test/unit/core/Core.t.sol:CoreTest
+[PASS] testGovernorSetsVcon() (gas: 23767)
+[PASS] testNonGovernorFailsSettingVcon() (gas: 14074)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 7.61ms (441.35µs CPU time)
+
+Ran 4 tests for src/test/unit/oracle/OraclePassThrough.t.sol:OraclePassThroughTest
+[PASS] testDataPassThroughSync() (gas: 33668)
+[PASS] testSetup() (gas: 13730)
+[PASS] testUpdateScalingPriceOracleFailureNotGovernor() (gas: 14959)
+[PASS] testUpdateScalingPriceOracleSuccess() (gas: 3174962)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 7.93ms (430.52µs CPU time)
+
+Ran 1 test for src/test/integration/IntegrationTestVoltDeployment.t.sol:IntegrationTestVoltDeployment
+[FAIL: EvmError: Revert] setUp() (gas: 0)
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 7.88ms (0.00ns CPU time)
+
+Ran 8 tests for src/test/unit/oracle/ScalingPriceOracle.t.sol:ScalingPriceOracleTest
+[PASS] testFulfillFailureCalendar() (gas: 22185)
+[PASS] testFulfillFailureTimed() (gas: 16404)
+[PASS] testFulfillMaxDeviationExceededFailureDown() (gas: 13357)
+[PASS] testFulfillMaxDeviationExceededFailureUp() (gas: 13633)
+[PASS] testFulfillSucceedsTwentyPercent() (gas: 32719)
+[PASS] testPriceDecreaseAfterInterpolation() (gas: 3169698)
+[PASS] testReadGetCurrentOraclePriceAfterInterpolation() (gas: 17215)
+[PASS] testSetup() (gas: 15377)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 8.01ms (2.47ms CPU time)
+
+Ran 32 tests for src/test/unit/psm/NonCustodialPSM.t.sol:NonCustodialPSMTest
+[PASS] testBufferReplenishment() (gas: 183224)
+[PASS] testERC20WithdrawFailure() (gas: 18740)
+[PASS] testERC20WithdrawSuccess() (gas: 132032)
+[PASS] testFeiBufferDepletion() (gas: 164868)
+[PASS] testGetMaxMintAmountOut() (gas: 77311)
+[PASS] testGetMintAmountOut() (gas: 37450)
+[PASS] testGetMintAmountOutAfterTime() (gas: 40697)
+[PASS] testGetRedeemAmountOut() (gas: 37678)
+[PASS] testGetRedeemAmountOutAfterTime() (gas: 40858)
+[PASS] testMintFailsWhenPaused() (gas: 34447)
+[PASS] testMintFailsWhenScalingPriceOracleIncreases() (gas: 92463)
+[PASS] testPSMSetup() (gas: 33664)
+[PASS] testRedeemFailsWhenPaused() (gas: 34447)
+[PASS] testRedeemFailsWhenScalingPriceOracleIncreases() (gas: 91956)
+[PASS] testSetGlobalRateLimitedMinterFailure() (gas: 20287)
+[PASS] testSetGlobalRateLimitedMinterFailureZeroAddress() (gas: 19421)
+[PASS] testSetGlobalRateLimitedMinterSuccess() (gas: 27011)
+[PASS] testSetMintFeeFailsWithoutCorrectRoles() (gas: 20144)
+[PASS] testSetMintFeeSuccess() (gas: 43084)
+[PASS] testSetPCVDepositFailureNonGovernor() (gas: 20307)
+[PASS] testSetPCVDepositFailureUnderlyingTokenMismatch() (gas: 1356206)
+[PASS] testSetPCVDepositFailureZeroAddress() (gas: 19464)
+[PASS] testSetPCVDepositSuccess() (gas: 1363881)
+[PASS] testSetRedeemFeeFailsWithoutCorrectRoles() (gas: 20166)
+[PASS] testSetRedeemFeeSuccess() (gas: 43083)
+[PASS] testSwapFeiForUnderlying() (gas: 138438)
+[FAIL: Error != expected error: ERC20: insufficient allowance != ERC20: transfer amount exceeds allowance] testSwapFeiForUnderlyingFailsWithoutApproval() (gas: 75291)
+[PASS] testSwapUnderlyingForFei() (gas: 155713)
+[PASS] testSwapUnderlyingForFeiAfterPriceIncrease() (gas: 171265)
+[FAIL: Error != expected error: ERC20: insufficient allowance != ERC20: transfer amount exceeds allowance] testSwapUnderlyingForFeiFailsWithoutApproval() (gas: 60883)
+[PASS] testSwapVoltForUnderlyingAfterPriceIncrease() (gas: 161937)
+[PASS] testUnderlyingBufferDepletion() (gas: 142068)
+Suite result: FAILED. 30 passed; 2 failed; 0 skipped; finished in 9.93ms (4.03ms CPU time)
+
+Ran 4 tests for src/test/unit/utils/Deviation.t.sol:DeviationTest
+[PASS] testDeviation() (gas: 2008)
+[PASS] testOutsideDeviation() (gas: 3570)
+[PASS] testWithinDeviation() (gas: 3313)
+[FAIL: panic: division or modulo by zero (0x12); counterexample: calldata=0x1cd183c50000000000000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe args=[0, -2]] testWithinDeviationFuzz(int128,int128) (runs: 117, μ: 3753, ~: 3709)
+Suite result: FAILED. 3 passed; 1 failed; 0 skipped; finished in 17.39ms (14.06ms CPU time)
+
+Ran 9 test suites in 55.77ms (78.95ms CPU time): 51 tests passed, 4 failed, 0 skipped (55 total tests)
+
+Failing tests:
+Encountered 1 failing test in src/test/integration/IntegrationTestVoltDeployment.t.sol:IntegrationTestVoltDeployment
+[FAIL: EvmError: Revert] setUp() (gas: 0)
+
+Encountered 2 failing tests in src/test/unit/psm/NonCustodialPSM.t.sol:NonCustodialPSMTest
+[FAIL: Error != expected error: ERC20: insufficient allowance != ERC20: transfer amount exceeds allowance] testSwapFeiForUnderlyingFailsWithoutApproval() (gas: 75291)
+[FAIL: Error != expected error: ERC20: insufficient allowance != ERC20: transfer amount exceeds allowance] testSwapUnderlyingForFeiFailsWithoutApproval() (gas: 60883)
+
+Encountered 1 failing test in src/test/unit/utils/Deviation.t.sol:DeviationTest
+[FAIL: panic: division or modulo by zero (0x12); counterexample: calldata=0x1cd183c50000000000000000000000000000000000000000000000000000000000000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe args=[0, -2]] testWithinDeviationFuzz(int128,int128) (runs: 117, μ: 3753, ~: 3709)
+
+Encountered a total of 4 failing tests, 51 tests succeeded

@@ -1,0 +1,38 @@
+Compiling 116 files with Solc 0.8.30
+Compiling 1 files with Solc 0.4.26
+Solc 0.4.26 finished in 22.76ms
+Solc 0.8.30 finished in 2.08s
+Compiler run successful with warnings:
+Warning: Invoking events without "emit" prefix is deprecated.
+src/external/WETH9.sol:47:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Deposit(msg.sender, msg.value);
+        ^----------------------------^
+Warning: Invoking events without "emit" prefix is deprecated.
+src/external/WETH9.sol:54:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Withdrawal(msg.sender, wad);
+        ^-------------------------^
+Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+src/external/WETH9.sol:58:16: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        return this.balance;
+               ^----------^
+Warning: Invoking events without "emit" prefix is deprecated.
+src/external/WETH9.sol:63:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, guy, wad);
+        ^----------------------------^
+Warning: Invoking events without "emit" prefix is deprecated.
+src/external/WETH9.sol:86:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(src, dst, wad);
+        ^---------------------^
+Warning (5159): "selfdestruct" has been deprecated. Note that, starting from the Cancun hard fork, the underlying opcode no longer deletes the code and data associated with an account and only transfers its Ether to the beneficiary, unless executed in the same transaction in which the contract was created (see EIP-6780). Any use in newly deployed contracts is strongly discouraged even if the new behavior is taken into account. Future changes to the EVM might further reduce the functionality of the opcode.
+  --> src/mock/ForceEth.sol:10:9:
+   |
+10 |         selfdestruct(payable(to));
+   |         ^^^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+ --> test/Smoke.t.sol:7:5:
+  |
+7 |     function testCompileOnly() public {
+  |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Analysing contracts...

@@ -1,0 +1,56 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
+
+import "forge-std/Test.sol";
+
+// 按模块分别导入你的合约
+import {Core} from "web3bugs-102/core/Core.sol";
+import {ScalingPriceOracle} from "web3bugs-102/oracle/ScalingPriceOracle.sol";
+import {CoreRef} from "web3bugs-102/refs/CoreRef.sol";
+import {PCVDeposit} from "web3bugs-102/pcv/PCVDeposit.sol";
+import {NonCustodialPSM} from "web3bugs-102/peg/NonCustodialPSM.sol";
+import {Vcon} from "web3bugs-102/vcon/Vcon.sol";
+import {Volt} from "web3bugs-102/volt/Volt.sol";
+
+contract AllContractsTest is Test {
+    // 初始化各个合约实例
+    Core core;
+    ScalingPriceOracle oracle;
+    CoreRef coreRef;
+    PCVDeposit pcv;
+    NonCustodialPSM psm;
+    Vcon vcon;
+    Volt volt;
+
+    function setUp() public {
+        // 示例：只传必需的 constructor 参数，其余按实际情况补全
+        core = new Core(/* args */);
+        oracle = new ScalingPriceOracle(/* args */);
+        coreRef = new CoreRef(/* args */);
+        pcv = new PCVDeposit(/* args */);
+        psm = new NonCustodialPSM(/* args */);
+        vcon = new Vcon(/* args */);
+        volt = new Volt(/* args */);
+    }
+
+    /// @notice Smoke 测试：只要能编译、部署、调用一个 view，就算通过
+    function testSmoke_AllCanRead() public {
+        core.totalSupply();
+        oracle.getCurrentOraclePrice();
+        coreRef.someView();      // 按实际函数名
+        pcv.totalValue();
+        psm.price();
+        vcon.balance();
+        volt.balance();
+        assert(true);
+    }
+
+    /// @notice fuzz 示例：对 Oracle 做逻辑不变式测试
+    function testFuzz_OracleCompound(uint256 bp, uint256 daysWarp) public {
+        bp = bound(bp, 1, 10_000);
+        daysWarp = bound(daysWarp, 1, 30);
+        // ... 按之前的脚本写入 CPI update、vm.warp、request/fulfill、assert ...
+    }
+
+    // 你也可以为 Core、Ref、PCV、PSM 等写更多 fuzz/test 函数
+}

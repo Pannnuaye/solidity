@@ -1,0 +1,148 @@
+. analyzed (87 contracts with 100 detectors), 207 result(s) found
+
+real    0m42.446s
+user    0m4.704s
+sys     0m1.080s
+
+(slither-env) sylhu@HU:/mnt/c/Users/SYLHU/Desktop/rc/zz/web3bugs-102$ jq '.results.detectors 
+    | group_by(.impact) 
+    | map({impact: .[0].impact, count: length})' \
+  results/slither-all.json
+[
+  {
+    "impact": "High",
+    "count": 7
+  },
+  {
+    "impact": "Informational",
+    "count": 107
+  },
+  {
+    "impact": "Low",
+    "count": 37
+  },
+  {
+    "impact": "Medium",
+    "count": 47
+  },
+  {
+    "impact": "Optimization",
+    "count": 9
+  }
+]
+(slither-env) sylhu@HU:/mnt/c/Users/SYLHU/Desktop/rc/zz/web3bugs-102$
+(slither-env) sylhu@HU:/mnt/c/Users/SYLHU/Desktop/rc/zz/web3bugs-102$ jq '.results.detectors
+   | group_by(.check)
+   | map({check: .[0].check, count: length})
+   | sort_by(.count) | reverse' \
+  results/slither-all.json
+[
+  {
+    "check": "naming-convention",
+    "count": 67
+  },
+  {
+    "check": "unused-return",
+    "count": 21
+  },
+  {
+    "check": "assembly",
+    "count": 16
+  },
+  {
+    "check": "divide-before-multiply",
+    "count": 15
+  },
+  {
+    "check": "timestamp",
+    "count": 12
+  },
+  {
+    "check": "shadowing-local",
+    "count": 11
+  },
+  {
+    "check": "solc-version",
+    "count": 9
+  },
+  {
+    "check": "immutable-states",
+    "count": 8
+  },
+  {
+    "check": "reentrancy-events",
+    "count": 6
+  },
+  {
+    "check": "low-level-calls",
+    "count": 5
+  },
+  {
+    "check": "incorrect-equality",
+    "count": 5
+  },
+  {
+    "check": "unchecked-transfer",
+    "count": 4
+  },
+  {
+    "check": "missing-zero-check",
+    "count": 4
+  },
+  {
+    "check": "dead-code",
+    "count": 4
+  },
+  {
+    "check": "write-after-write",
+    "count": 3
+  },
+  {
+    "check": "uninitialized-local",
+    "count": 3
+  },
+  {
+    "check": "reentrancy-benign",
+    "count": 3
+  },
+  {
+    "check": "missing-inheritance",
+    "count": 2
+  },
+  {
+    "check": "unused-state",
+    "count": 1
+  },
+  {
+    "check": "too-many-digits",
+    "count": 1
+  },
+  {
+    "check": "suicidal",
+    "count": 1
+  },
+  {
+    "check": "reentrancy-unlimited-gas",
+    "count": 1
+  },
+  {
+    "check": "pragma",
+    "count": 1
+  },
+  {
+    "check": "incorrect-modifier",
+    "count": 1
+  },
+  {
+    "check": "incorrect-exp",
+    "count": 1
+  },
+  {
+    "check": "constable-states",
+    "count": 1
+  },
+  {
+    "check": "arbitrary-send-eth",
+    "count": 1
+  }
+]

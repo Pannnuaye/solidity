@@ -1,0 +1,7 @@
+ds-test/=lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+@chainlink/contracts/=lib/chainlink/contracts/
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+@uniswap/v2-periphery/contracts/=lib/v2-periphery/contracts/
+web3bugs-102/=src/
+hardhat/=src/hardhat/

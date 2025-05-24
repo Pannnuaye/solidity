@@ -1,0 +1,27 @@
+Compiler run failed:
+Warning: Invoking events without "emit" prefix is deprecated.
+src/external/WETH9.sol:47:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Deposit(msg.sender, msg.value);
+        ^----------------------------^
+Warning: Invoking events without "emit" prefix is deprecated.
+src/external/WETH9.sol:54:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Withdrawal(msg.sender, wad);
+        ^-------------------------^
+Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+src/external/WETH9.sol:58:16: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        return this.balance;
+               ^----------^
+Warning: Invoking events without "emit" prefix is deprecated.
+src/external/WETH9.sol:63:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, guy, wad);
+        ^----------------------------^
+Warning: Invoking events without "emit" prefix is deprecated.
+src/external/WETH9.sol:86:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(src, dst, wad);
+        ^---------------------^
+Error (9182): Function, variable, struct or modifier declaration expected.
+  --> test/OracleFuzz.t.sol:11:1:
+   |
+11 | ```
+   | ^
+

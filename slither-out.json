@@ -1,0 +1,141 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": ">=0.5.0",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "lib/v2-periphery/contracts/interfaces/IWETH.sol",
+              "filename_absolute": "/mnt/c/Users/SYLHU/Desktop/rc/zz/z/lib/v2-periphery/contracts/interfaces/IWETH.sol",
+              "filename_short": "lib/v2-periphery/contracts/interfaces/IWETH.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                ">=",
+                "0.5",
+                ".0"
+              ]
+            }
+          },
+          {
+            "type": "pragma",
+            "name": "^0.8.0",
+            "source_mapping": {
+              "start": 45,
+              "length": 23,
+              "filename_relative": "lib/web3bugs/102/contracts/Constants.sol",
+              "filename_absolute": "/mnt/c/Users/SYLHU/Desktop/rc/zz/z/lib/web3bugs/102/contracts/Constants.sol",
+              "filename_short": "lib/web3bugs/102/contracts/Constants.sol",
+              "is_dependency": false,
+              "lines": [
+                2
+              ],
+              "starting_column": 1,
+              "ending_column": 24
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "2 different versions of Solidity are used:\n\t- Version constraint >=0.5.0 is used by:\n\t\t->=0.5.0 (lib/v2-periphery/contracts/interfaces/IWETH.sol#1)\n\t- Version constraint ^0.8.0 is used by:\n\t\t-^0.8.0 (lib/web3bugs/102/contracts/Constants.sol#2)\n",
+        "markdown": "2 different versions of Solidity are used:\n\t- Version constraint >=0.5.0 is used by:\n\t\t-[>=0.5.0](lib/v2-periphery/contracts/interfaces/IWETH.sol#L1)\n\t- Version constraint ^0.8.0 is used by:\n\t\t-[^0.8.0](lib/web3bugs/102/contracts/Constants.sol#L2)\n",
+        "first_markdown_element": "lib/v2-periphery/contracts/interfaces/IWETH.sol#L1",
+        "id": "848c4c5a8f3f9854e3351901449dff75a4da2fc9b3666f3c4d98c3dba65c3965",
+        "check": "pragma",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.8.0",
+            "source_mapping": {
+              "start": 45,
+              "length": 23,
+              "filename_relative": "lib/web3bugs/102/contracts/Constants.sol",
+              "filename_absolute": "/mnt/c/Users/SYLHU/Desktop/rc/zz/z/lib/web3bugs/102/contracts/Constants.sol",
+              "filename_short": "lib/web3bugs/102/contracts/Constants.sol",
+              "is_dependency": false,
+              "lines": [
+                2
+              ],
+              "starting_column": 1,
+              "ending_column": 24
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.8",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess\n\t- AbiReencodingHeadOverflowWithStaticArrayCleanup\n\t- DirtyBytesArrayToStorage\n\t- DataLocationChangeInInternalOverride\n\t- NestedCalldataArrayAbiReencodingSizeValidation\n\t- SignedImmutables\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching.\nIt is used by:\n\t- ^0.8.0 (lib/web3bugs/102/contracts/Constants.sol#2)\n",
+        "markdown": "Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- FullInlinerNonExpressionSplitArgumentEvaluationOrder\n\t- MissingSideEffectsOnSelectorAccess\n\t- AbiReencodingHeadOverflowWithStaticArrayCleanup\n\t- DirtyBytesArrayToStorage\n\t- DataLocationChangeInInternalOverride\n\t- NestedCalldataArrayAbiReencodingSizeValidation\n\t- SignedImmutables\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching.\nIt is used by:\n\t- [^0.8.0](lib/web3bugs/102/contracts/Constants.sol#L2)\n",
+        "first_markdown_element": "lib/web3bugs/102/contracts/Constants.sol#L2",
+        "id": "230c9ed0cd1c19dc5fd33bc13ca74298f679db19fdc966865287d05183d45dce",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": ">=0.5.0",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "lib/v2-periphery/contracts/interfaces/IWETH.sol",
+              "filename_absolute": "/mnt/c/Users/SYLHU/Desktop/rc/zz/z/lib/v2-periphery/contracts/interfaces/IWETH.sol",
+              "filename_short": "lib/v2-periphery/contracts/interfaces/IWETH.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                ">=",
+                "0.5",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Version constraint >=0.5.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- DirtyBytesArrayToStorage\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching\n\t- EmptyByteArrayCopy\n\t- DynamicArrayCleanup\n\t- ImplicitConstructorCallvalueCheck\n\t- TupleAssignmentMultiStackSlotComponents\n\t- MemoryArrayCreationOverflow\n\t- privateCanBeOverridden\n\t- SignedArrayStorageCopy\n\t- ABIEncoderV2StorageArrayWithMultiSlotElement\n\t- DynamicConstructorArgumentsClippedABIV2\n\t- UninitializedFunctionPointerInConstructor\n\t- IncorrectEventSignatureInLibraries\n\t- ABIEncoderV2PackedStorage.\nIt is used by:\n\t- >=0.5.0 (lib/v2-periphery/contracts/interfaces/IWETH.sol#1)\n",
+        "markdown": "Version constraint >=0.5.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- DirtyBytesArrayToStorage\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching\n\t- EmptyByteArrayCopy\n\t- DynamicArrayCleanup\n\t- ImplicitConstructorCallvalueCheck\n\t- TupleAssignmentMultiStackSlotComponents\n\t- MemoryArrayCreationOverflow\n\t- privateCanBeOverridden\n\t- SignedArrayStorageCopy\n\t- ABIEncoderV2StorageArrayWithMultiSlotElement\n\t- DynamicConstructorArgumentsClippedABIV2\n\t- UninitializedFunctionPointerInConstructor\n\t- IncorrectEventSignatureInLibraries\n\t- ABIEncoderV2PackedStorage.\nIt is used by:\n\t- [>=0.5.0](lib/v2-periphery/contracts/interfaces/IWETH.sol#L1)\n",
+        "first_markdown_element": "lib/v2-periphery/contracts/interfaces/IWETH.sol#L1",
+        "id": "e077140e3a837c8430b5819e033cd541e13e61dbeaf7e512aa72325abe12bef1",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

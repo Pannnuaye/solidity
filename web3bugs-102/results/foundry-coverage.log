@@ -1,0 +1,13 @@
+Need to install the following packages:
+  solidity-coverage@0.8.16
+Ok to proceed? (y) 
+⚠️  solidity-coverage >= 0.7.0 is no longer a shell command. ⚠️
+=============================================================
+
+Instead, you should use the plugin produced for your development stack
+(like Hardhat) or design a custom workflow using the package API
+
+> See https://github.com/sc-forks/solidity-coverage for help with configuration.
+
+Thanks! - sc-forks
+
